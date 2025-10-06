@@ -1,0 +1,26 @@
+### Create a new AddressBook
+POST http://localhost:8080/addressbooks
+Content-Type: application/json
+
+{}
+
+### Get an AddressBook by ID
+GET http://localhost:8080/addressbooks/1
+
+### Add a Buddy to an AddressBook
+POST http://localhost:8080/addressbooks/1/buddies
+Content-Type: application/json
+
+{"name":"John","phoneNumber":"1234567890"}
+
+### Remove a Buddy from an AddressBook
+DELETE http://localhost:8080/addressbooks/1/buddies/2
+
+### Get all AddressBooks (Spring Data REST)
+GET http://localhost:8080/addressbooks
+
+### Get Buddies for an AddressBook (Spring Data REST)
+GET http://localhost:8080/addressbooks/1/buddies
+
+### Find Buddies by Name (Spring Data REST)
+GET http://localhost:8080/buddies/search/findByName?name=Milena
